@@ -22,6 +22,7 @@ class User {
     var publicGists:Int = 0
     var following:Int = 0
     var followers:Int = 0
+    var updatedAt:String = ""
     
     init(user:JSON) {
         self.loginName = user["login"].stringValue
@@ -35,6 +36,7 @@ class User {
         self.publicGists = user["public_gists"].intValue
         self.followers = user["followers"].intValue
         self.following = user["following"].intValue
+        self.updatedAt = user["updated_at"].stringValue
     }
 }
 

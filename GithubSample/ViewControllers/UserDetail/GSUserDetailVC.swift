@@ -10,7 +10,8 @@ import UIKit
 
 class GSUserDetailVC: UIViewController {
 
-    var loginName:String!
+    var loginName:String! = "RajanMaheshwari"
+    var user:User?
     
     @IBOutlet weak var userDetailTableView: UITableView!
     override func viewDidLoad() {
@@ -30,7 +31,16 @@ class GSUserDetailVC: UIViewController {
 //        if #available(iOS 11.0, *) {
 //            userDetailTableView.contentInsetAdjustmentBehavior = .never
 //        }
+        self.title = self.loginName
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        navigationBar?.shadowImage = UIImage()
+        
         self.userDetailTableView.register(UINib(nibName: "GSProfileHeaderTableCell", bundle: nil), forCellReuseIdentifier: "GSProfileHeaderTableCell")
+        self.userDetailTableView.register(UINib(nibName: "GSProfileOverviewTableCell", bundle: nil), forCellReuseIdentifier: "GSProfileOverviewTableCell")
+        self.userDetailTableView.register(UINib(nibName: "GSBioTableCell", bundle: nil), forCellReuseIdentifier: "GSBioTableCell")
+        
+
     }
     
     func fetchUserDetails(loginName:String) {
@@ -40,7 +50,10 @@ class GSUserDetailVC: UIViewController {
                 return
             }
             if let user = user {
-                print(user)
+                self.user = user
+                DispatchQueue.main.async {
+                    self.userDetailTableView.reloadData()
+                }
             }
         }
     }

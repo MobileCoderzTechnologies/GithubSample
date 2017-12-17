@@ -71,9 +71,8 @@ extension User {
             }
             guard let response = response else {return}
             print(response)
-            var user:User?
+            let user = User(user: response)
             completionHandler(user, nil)
-            
         }
     }
     
