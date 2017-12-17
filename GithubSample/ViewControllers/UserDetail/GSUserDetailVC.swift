@@ -10,7 +10,13 @@ import UIKit
 
 class GSUserDetailVC: UIViewController {
 
-    var loginName:String! = "RajanMaheshwari"
+    enum UserDetailOptions: Int {
+        case profileHeader
+        case profileOverview
+        case bio
+    }
+    
+    var loginName:String!
     var user:User?
     
     @IBOutlet weak var userDetailTableView: UITableView!
@@ -23,28 +29,24 @@ class GSUserDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    func setup() {
-        //To remove the top white line which came in iOS 11
-//        if #available(iOS 11.0, *) {
-//            userDetailTableView.contentInsetAdjustmentBehavior = .never
-//        }
+    //MARK:- Private Methods
+    private func setup() {
         self.title = self.loginName
         let navigationBar = self.navigationController?.navigationBar
         navigationBar?.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
         navigationBar?.shadowImage = UIImage()
         
-        self.userDetailTableView.register(UINib(nibName: "GSProfileHeaderTableCell", bundle: nil), forCellReuseIdentifier: "GSProfileHeaderTableCell")
-        self.userDetailTableView.register(UINib(nibName: "GSProfileOverviewTableCell", bundle: nil), forCellReuseIdentifier: "GSProfileOverviewTableCell")
-        self.userDetailTableView.register(UINib(nibName: "GSBioTableCell", bundle: nil), forCellReuseIdentifier: "GSBioTableCell")
-        
-
+        self.userDetailTableView.register(UINib(nibName: Constants.CellIdentifier.profileHeader, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifier.profileHeader)
+        self.userDetailTableView.register(UINib(nibName: Constants.CellIdentifier.profileOverview, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifier.profileOverview)
+        self.userDetailTableView.register(UINib(nibName: Constants.CellIdentifier.bio, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifier.bio)
     }
     
-    func fetchUserDetails(loginName:String) {
+    private func fetchUserDetails(loginName:String) {
+        self.showLoader()
         User.fetchUserDetails(loginName: loginName) { (user:User?, error:NSError?) in
+            self.hideLoader()
             if error != nil {
                 self.showToast(message: error!.localizedDescription)
                 return
@@ -57,15 +59,14 @@ class GSUserDetailVC: UIViewController {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @objc func shareUserProfile() {
+        self.showActivityController(nil, text: "Find out more of this user \(user!.htmlUrl)", url: nil, activities: nil)
     }
-    */
-
+    
+    func goToFollowersList() {
+        let followerListVC = UIStoryboard.searchStoryBoard().instantiateViewController(type: GSFollowersListVC.self)!
+        followerListVC.user = user
+        self.navigationController?.pushViewController(followerListVC, animated: true)
+    }
 }

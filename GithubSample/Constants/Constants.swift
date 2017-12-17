@@ -10,4 +10,10 @@ import Foundation
 struct Constants {
     static let baseUrl = ConfigurationManager.shared().applicationEndPoint()
 
+    struct CellIdentifier {
+        static let search = "GSSearchCell"
+        static let profileHeader  = "GSProfileHeaderTableCell"
+        static let profileOverview  = "GSProfileOverviewTableCell"
+        static let bio  = "GSBioTableCell"
+    }
 }

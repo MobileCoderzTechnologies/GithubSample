@@ -10,6 +10,7 @@ import UIKit
 
 class GSPlaceholderView: UIView {
 
+    @IBOutlet weak var placeholderLabel: UILabel!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

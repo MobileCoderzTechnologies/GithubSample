@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hzy-x8-zQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xt9-Dh-BrA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,6 +94,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ut6-Kp-oIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-7.2000000000000002" y="-269.41529235382313"/>
+        </scene>
+        <!--Followers ListVC-->
+        <scene sceneID="45a-ib-iag">
+            <objects>
+                <viewController storyboardIdentifier="GSFollowersListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x9d-ir-Alb" customClass="GSFollowersListVC" customModule="GithubSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3A6-cv-i4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iA1-Z2-OAT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="x9d-ir-Alb" id="mPT-oM-a8Z"/>
+                                    <outlet property="delegate" destination="x9d-ir-Alb" id="pnO-wR-Zdw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="top" secondItem="4Mq-f9-dCr" secondAttribute="top" id="51y-86-sbs"/>
+                            <constraint firstItem="4Mq-f9-dCr" firstAttribute="bottom" secondItem="iA1-Z2-OAT" secondAttribute="bottom" id="XVr-v5-1Fx"/>
+                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="leading" secondItem="4Mq-f9-dCr" secondAttribute="leading" id="pjJ-As-giG"/>
+                            <constraint firstItem="4Mq-f9-dCr" firstAttribute="trailing" secondItem="iA1-Z2-OAT" secondAttribute="trailing" id="w0b-Rc-UWm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Mq-f9-dCr"/>
+                    </view>
+                    <connections>
+                        <outlet property="followersTableView" destination="iA1-Z2-OAT" id="2MU-FK-T2D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGQ-e5-Dgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="-269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcR-Xq-G0u">

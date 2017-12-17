@@ -18,7 +18,9 @@ class GSSearchListVC: UIViewController {
     var total = 0
     var isLoading = false
     var placeHolderView:GSPlaceholderView?
+    var searchUser:String!
 
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -27,23 +29,31 @@ class GSSearchListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.searchUsersTableView.deselectSelectedRow(animated: true)
     }
 
-    func setup() {
-        searchUsersTableView.register(UINib(nibName: "GSSearchCell", bundle: nil), forCellReuseIdentifier: "GSSearchCell")
+    //MARK:- Private Methods
+    private func setup() {
+        searchUsersTableView.register(UINib(nibName: Constants.CellIdentifier.search, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifier.search)
         let titleImageView = UIImageView(image: UIImage(named:"githubLogo"))
         titleImageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = titleImageView
-        
+        navigationController?.navigationBar.tintColor = UIColor.white
+
         placeHolderView = GSPlaceholderView.loadPlaceHolderView()
         placeHolderView?.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
         placeHolderView?.center = self.view.center
+        self.searchUsersTableView.keyboardDismissMode = .onDrag
+
         self.view.addSubview(placeHolderView!)
     }
     
     func fetchUsers(searchString:String,pageNo:Int) {
+        if pageNo == 1 {
+            self.showLoader()
+        }
         User.fetchUserList(searchString: searchString, pageNo: pageNo) { (users:[User]?, total:Int, error:NSError?) in
+            self.hideLoader()
             self.isLoading = false
             if error != nil {
                 self.showToast(message: error!.localizedDescription)
@@ -66,10 +76,9 @@ class GSSearchListVC: UIViewController {
         if total == self.users.count || isLoading {return}
         if total > self.users.count {
             pageNo += 1
-            print(pageNo)
             isLoading = true
             self.setupLoadingMoreOnTable(tableView: self.searchUsersTableView)
-            self.fetchUsers(searchString: userSearchBar.text!, pageNo: pageNo)
+            self.fetchUsers(searchString: searchUser, pageNo: pageNo)
         }
     }
 }

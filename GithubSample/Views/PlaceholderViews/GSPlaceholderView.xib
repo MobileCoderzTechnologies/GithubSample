@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,9 +37,9 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Users Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEf-ur-gYU">
-                            <rect key="frame" x="13" y="144" width="124" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Users Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="LEf-ur-gYU">
+                            <rect key="frame" x="8" y="144" width="134" height="20"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -44,6 +49,8 @@
                         <constraint firstAttribute="width" constant="150" id="2MJ-ak-2HH"/>
                         <constraint firstItem="fwJ-BZ-kHV" firstAttribute="top" secondItem="udh-kW-ACh" secondAttribute="top" constant="8" id="Q9N-OG-GHw"/>
                         <constraint firstAttribute="height" constant="170" id="TJs-ri-cRv"/>
+                        <constraint firstAttribute="trailing" secondItem="LEf-ur-gYU" secondAttribute="trailing" constant="8" id="WO4-wD-l94"/>
+                        <constraint firstItem="LEf-ur-gYU" firstAttribute="leading" secondItem="udh-kW-ACh" secondAttribute="leading" constant="8" id="YHc-HZ-YfQ"/>
                         <constraint firstItem="LEf-ur-gYU" firstAttribute="top" secondItem="fwJ-BZ-kHV" secondAttribute="bottom" constant="8" id="adq-IH-9ia"/>
                         <constraint firstItem="fwJ-BZ-kHV" firstAttribute="centerX" secondItem="udh-kW-ACh" secondAttribute="centerX" id="gqC-AO-oIj"/>
                         <constraint firstItem="LEf-ur-gYU" firstAttribute="centerX" secondItem="fwJ-BZ-kHV" secondAttribute="centerX" id="shZ-Wl-srl"/>
@@ -56,6 +63,9 @@
                 <constraint firstItem="udh-kW-ACh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="r1I-H1-qfZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="placeholderLabel" destination="LEf-ur-gYU" id="3zs-8A-CiE"/>
+            </connections>
         </view>
     </objects>
     <resources>

@@ -16,6 +16,9 @@
         <array key="TrebuchetMSBold.ttf">
             <string>TrebuchetMS-Bold</string>
         </array>
+        <array key="githubfont.ttf">
+            <string>githubfont</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -46,25 +49,37 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="mFa-y8-bl0">
-                        <rect key="frame" x="218" y="8" width="94" height="13"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="mFa-y8-bl0">
+                        <rect key="frame" x="8" y="8" width="94" height="13"/>
                         <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFb-7P-VPV">
+                        <rect key="frame" x="271" y="4" width="41" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="TlM-6F-GiF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="githubfont" family="githubfont" pointSize="23"/>
+                        <state key="normal" title="b">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="xB4-Kg-GDe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6jE-KW-hl5"/>
-                    <constraint firstItem="mFa-y8-bl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="D8d-IK-39C"/>
                     <constraint firstItem="70d-cj-dPV" firstAttribute="top" secondItem="xB4-Kg-GDe" secondAttribute="bottom" constant="8" id="DW5-FJ-eyJ"/>
+                    <constraint firstItem="xFb-7P-VPV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="JoB-Pr-sLo"/>
                     <constraint firstItem="xB4-Kg-GDe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Kwa-4j-KgX"/>
-                    <constraint firstAttribute="trailing" secondItem="mFa-y8-bl0" secondAttribute="trailing" constant="8" id="PFA-gx-0fj"/>
+                    <constraint firstItem="xB4-Kg-GDe" firstAttribute="leading" secondItem="mFa-y8-bl0" secondAttribute="trailing" constant="8" id="QBu-go-veN"/>
                     <constraint firstItem="70d-cj-dPV" firstAttribute="centerX" secondItem="xB4-Kg-GDe" secondAttribute="centerX" id="SdQ-DR-9EV"/>
                     <constraint firstItem="l7j-eH-PhF" firstAttribute="centerX" secondItem="70d-cj-dPV" secondAttribute="centerX" id="V3Y-Yb-2bE"/>
                     <constraint firstAttribute="bottom" secondItem="l7j-eH-PhF" secondAttribute="bottom" constant="9.5" id="ZKg-JQ-o1T"/>
-                    <constraint firstItem="mFa-y8-bl0" firstAttribute="leading" secondItem="xB4-Kg-GDe" secondAttribute="trailing" constant="8" id="eJ1-0M-NZe"/>
+                    <constraint firstAttribute="trailing" secondItem="xFb-7P-VPV" secondAttribute="trailing" constant="8" id="fWs-oM-yQr"/>
+                    <constraint firstItem="mFa-y8-bl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hf2-4i-WJO"/>
                     <constraint firstItem="l7j-eH-PhF" firstAttribute="top" secondItem="70d-cj-dPV" secondAttribute="bottom" constant="8" id="hpy-IO-Rjt"/>
+                    <constraint firstItem="mFa-y8-bl0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lzt-eB-4wV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -72,6 +87,7 @@
                 <outlet property="lastUpdateLabel" destination="mFa-y8-bl0" id="I55-eA-rmn"/>
                 <outlet property="locationLabel" destination="l7j-eH-PhF" id="ryV-1x-Q1e"/>
                 <outlet property="nameLabel" destination="70d-cj-dPV" id="XGo-GU-b4X"/>
+                <outlet property="shareButton" destination="xFb-7P-VPV" id="IQc-e5-3GT"/>
                 <outlet property="userImageView" destination="xB4-Kg-GDe" id="4Nk-O4-Evm"/>
             </connections>
             <point key="canvasLocation" x="33" y="164"/>

@@ -23,4 +23,11 @@ class GSSearchCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setup(user:User) {
+        self.userLoginNameLabel.text = user.loginName
+        self.userImageView.sd_setShowActivityIndicatorView(true)
+        self.userImageView.sd_setIndicatorStyle(.gray)
+        self.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: UIImage(named: "placeHolder"))
+    }
+    
 }

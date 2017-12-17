@@ -8,14 +8,16 @@
 
 import UIKit
 
-class GSProfileOverviewTableCell: UITableViewCell {
-    
-    private enum ViewTappedOptions:Int {
-        case followers = 1
-        case following
-        case publicGists
+enum ViewTappedOptions:Int {
+    case followers = 1
+    case following
+    case publicGists
+}
 
-    }
+protocol GSProfileOverviewCellDelegate {
+    func headerViewTapped(tappedView:ViewTappedOptions)
+}
+class GSProfileOverviewTableCell: UITableViewCell {
     
     @IBOutlet weak var publicReposLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
@@ -24,6 +26,8 @@ class GSProfileOverviewTableCell: UITableViewCell {
     @IBOutlet weak var publicReposView: GSProfileOverviewSubview!
     @IBOutlet weak var followingView: GSProfileOverviewSubview!
     @IBOutlet weak var outerView: UIView!
+    
+    var delegate:GSProfileOverviewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,14 +59,20 @@ class GSProfileOverviewTableCell: UITableViewCell {
 extension GSProfileOverviewTableCell : GSProfileOverviewSubviewDelegate {
     
     func viewTapped(tag: Int) {
-        let options = ViewTappedOptions(rawValue: tag)!
-        switch options {
+        let option = ViewTappedOptions(rawValue: tag)!
+        switch option {
         case .followers:
-            print("Followers Tapped")
+            if let delegate = delegate {
+                delegate.headerViewTapped(tappedView: option)
+            }
         case .following:
-            print("following Tapped")
+            if let delegate = delegate {
+                delegate.headerViewTapped(tappedView: option)
+            }
         case .publicGists:
-            print("publicGists Tapped")
+            if let delegate = delegate {
+                delegate.headerViewTapped(tappedView: option)
+            }
         }
     }
     

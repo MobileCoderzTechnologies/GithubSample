@@ -17,6 +17,7 @@ extension GSSearchListVC : UISearchBarDelegate {
         }
         self.users.removeAll()
         self.searchUsersTableView.reloadData()
+        self.searchUser = searchBar.text!
         self.pageNo = 1
         self.fetchUsers(searchString: searchBar.text!, pageNo: pageNo)
     }

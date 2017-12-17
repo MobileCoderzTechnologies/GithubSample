@@ -11,6 +11,7 @@ import SDWebImage
 
 class GSProfileHeaderTableCell: UITableViewCell {
 
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var lastUpdateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!

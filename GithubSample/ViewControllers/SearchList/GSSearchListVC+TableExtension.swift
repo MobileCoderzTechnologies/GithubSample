@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 extension GSSearchListVC : UITableViewDataSource, UITableViewDelegate {
     
@@ -16,12 +15,9 @@ extension GSSearchListVC : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GSSearchCell") as! GSSearchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier.search) as! GSSearchCell
         let user = users[indexPath.row]
-        cell.userLoginNameLabel.text = user.loginName
-        cell.userImageView.sd_setShowActivityIndicatorView(true)
-        cell.userImageView.sd_setIndicatorStyle(.gray)
-        cell.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: UIImage(named: "placeHolder"))
+        cell.setup(user: user)
         return cell
     }
     

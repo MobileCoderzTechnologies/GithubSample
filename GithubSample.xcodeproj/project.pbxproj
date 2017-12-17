@@ -30,6 +30,16 @@
 		E5AA98411FE6EBF500BB80B1 /* GSBioTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5AA983F1FE6EBF500BB80B1 /* GSBioTableCell.xib */; };
 		E5AA984B1FE6F2E500BB80B1 /* User+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98491FE6F2E500BB80B1 /* User+Services.swift */; };
 		E5AA984C1FE6F2E500BB80B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA984A1FE6F2E500BB80B1 /* User.swift */; };
+		E5AA984F1FE6F3B000BB80B1 /* GSFollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA984E1FE6F3B000BB80B1 /* GSFollowersListVC.swift */; };
+		E5AA98511FE6F41D00BB80B1 /* GSFollowersListVC+TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98501FE6F41D00BB80B1 /* GSFollowersListVC+TableExtension.swift */; };
+		E5AA98581FE7005E00BB80B1 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98571FE7005E00BB80B1 /* UITableView+Extension.swift */; };
+		E5AA985C1FE706DC00BB80B1 /* githubfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5AA985B1FE706DB00BB80B1 /* githubfont.ttf */; };
+		E5AA98811FE70A4B00BB80B1 /* GithubSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5AA987F1FE70A4B00BB80B1 /* GithubSample.xcdatamodeld */; };
+		E5AA98841FE70B0300BB80B1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98831FE70B0300BB80B1 /* CoreDataStack.swift */; };
+		E5AA98881FE70C8E00BB80B1 /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98861FE70C8E00BB80B1 /* UserModel+CoreDataClass.swift */; };
+		E5AA98891FE70C8E00BB80B1 /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98871FE70C8E00BB80B1 /* UserModel+CoreDataProperties.swift */; };
+		E5AA988B1FE70CD400BB80B1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA988A1FE70CD400BB80B1 /* CoreDataManager.swift */; };
+		E5AA98911FE7173E00BB80B1 /* ConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98901FE7173E00BB80B1 /* ConnectivityManager.swift */; };
 		E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */; };
 		E5D572C31FE55EB100DBD57A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D572C21FE55EB100DBD57A /* Search.storyboard */; };
 		E5D572DC1FE5780300DBD57A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572DB1FE5780300DBD57A /* Constants.swift */; };
@@ -68,6 +78,16 @@
 		E5AA983F1FE6EBF500BB80B1 /* GSBioTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSBioTableCell.xib; sourceTree = "<group>"; };
 		E5AA98491FE6F2E500BB80B1 /* User+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Services.swift"; sourceTree = "<group>"; };
 		E5AA984A1FE6F2E500BB80B1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5AA984E1FE6F3B000BB80B1 /* GSFollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSFollowersListVC.swift; sourceTree = "<group>"; };
+		E5AA98501FE6F41D00BB80B1 /* GSFollowersListVC+TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSFollowersListVC+TableExtension.swift"; sourceTree = "<group>"; };
+		E5AA98571FE7005E00BB80B1 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		E5AA985B1FE706DB00BB80B1 /* githubfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = githubfont.ttf; sourceTree = "<group>"; };
+		E5AA98801FE70A4B00BB80B1 /* GithubSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubSample.xcdatamodel; sourceTree = "<group>"; };
+		E5AA98831FE70B0300BB80B1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E5AA98861FE70C8E00BB80B1 /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5AA98871FE70C8E00BB80B1 /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5AA988A1FE70CD400BB80B1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E5AA98901FE7173E00BB80B1 /* ConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityManager.swift; sourceTree = "<group>"; };
 		E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D572C21FE55EB100DBD57A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		E5D572DB1FE5780300DBD57A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -137,6 +157,8 @@
 				E52A8B4C1FE554F600CCCC68 /* Views */,
 				E52A8B2F1FE5540A00CCCC68 /* ViewControllers */,
 				E52A8B251FE54D5800CCCC68 /* Managers */,
+				E5AA98591FE706DB00BB80B1 /* Supporting Files */,
+				E5AA987E1FE70A3A00BB80B1 /* Resources */,
 				E52A8B1A1FE54A0F00CCCC68 /* Assets.xcassets */,
 				E52A8B1C1FE54A0F00CCCC68 /* LaunchScreen.storyboard */,
 				E52A8B1F1FE54A0F00CCCC68 /* Info.plist */,
@@ -147,6 +169,8 @@
 		E52A8B251FE54D5800CCCC68 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA988F1FE7173100BB80B1 /* ConnectionManager */,
+				E5AA98821FE70AF500BB80B1 /* CoreDataManager */,
 				E52A8B2C1FE552F500CCCC68 /* APIManager */,
 				E52A8B291FE552B100CCCC68 /* ConfigurationManager */,
 			);
@@ -172,6 +196,7 @@
 		E52A8B2F1FE5540A00CCCC68 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA984D1FE6F39200BB80B1 /* Followers */,
 				E5AA98121FE6BB3A00BB80B1 /* UserDetail */,
 				E5D572E51FE59EAE00DBD57A /* SearchList */,
 			);
@@ -250,6 +275,7 @@
 		E5AA98421FE6F2D400BB80B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA98851FE70C7400BB80B1 /* CoreDataModels */,
 				E5AA98481FE6F2E500BB80B1 /* User */,
 			);
 			path = Models;
@@ -262,6 +288,65 @@
 				E5AA984A1FE6F2E500BB80B1 /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		E5AA984D1FE6F39200BB80B1 /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA984E1FE6F3B000BB80B1 /* GSFollowersListVC.swift */,
+				E5AA98501FE6F41D00BB80B1 /* GSFollowersListVC+TableExtension.swift */,
+			);
+			path = Followers;
+			sourceTree = "<group>";
+		};
+		E5AA98591FE706DB00BB80B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA985A1FE706DB00BB80B1 /* fonts */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5AA985A1FE706DB00BB80B1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA985B1FE706DB00BB80B1 /* githubfont.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		E5AA987E1FE70A3A00BB80B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA987F1FE70A4B00BB80B1 /* GithubSample.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E5AA98821FE70AF500BB80B1 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA98831FE70B0300BB80B1 /* CoreDataStack.swift */,
+				E5AA988A1FE70CD400BB80B1 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		E5AA98851FE70C7400BB80B1 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA98861FE70C8E00BB80B1 /* UserModel+CoreDataClass.swift */,
+				E5AA98871FE70C8E00BB80B1 /* UserModel+CoreDataProperties.swift */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
+		E5AA988F1FE7173100BB80B1 /* ConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA98901FE7173E00BB80B1 /* ConnectivityManager.swift */,
+			);
+			path = ConnectionManager;
 			sourceTree = "<group>";
 		};
 		E5D572BA1FE55CD400DBD57A /* AppDelegate */ = {
@@ -295,6 +380,7 @@
 				E5AA98151FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift */,
 				E5AA98251FE6C95E00BB80B1 /* UIColor+Additions.swift */,
 				E5AA983C1FE6E5A200BB80B1 /* Date+Additons.swift */,
+				E5AA98571FE7005E00BB80B1 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +470,7 @@
 				E5AA98381FE6D4F800BB80B1 /* GSSearchCell.xib in Resources */,
 				E5AA98111FE6B96A00BB80B1 /* GSPlaceholderView.xib in Resources */,
 				E52A8B1B1FE54A0F00CCCC68 /* Assets.xcassets in Resources */,
+				E5AA985C1FE706DC00BB80B1 /* githubfont.ttf in Resources */,
 				E5AA98361FE6D4F800BB80B1 /* GSProfileOverviewTableCell.xib in Resources */,
 				E5AA98341FE6D4F800BB80B1 /* GSProfileHeaderTableCell.xib in Resources */,
 				E5D572E41FE581D300DBD57A /* GSLoadMoreView.xib in Resources */,
@@ -436,6 +523,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GithubSample/Pods-GithubSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -443,6 +531,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -462,22 +551,31 @@
 				E5AA98351FE6D4F800BB80B1 /* GSProfileOverviewTableCell.swift in Sources */,
 				E5AA98371FE6D4F800BB80B1 /* GSSearchCell.swift in Sources */,
 				E5AA98141FE6BB4C00BB80B1 /* GSUserDetailVC.swift in Sources */,
+				E5AA98841FE70B0300BB80B1 /* CoreDataStack.swift in Sources */,
+				E5AA98881FE70C8E00BB80B1 /* UserModel+CoreDataClass.swift in Sources */,
 				E52A8B2E1FE5530000CCCC68 /* APIManager.swift in Sources */,
 				E5AA984B1FE6F2E500BB80B1 /* User+Services.swift in Sources */,
+				E5AA98511FE6F41D00BB80B1 /* GSFollowersListVC+TableExtension.swift in Sources */,
+				E5AA98891FE70C8E00BB80B1 /* UserModel+CoreDataProperties.swift in Sources */,
 				E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */,
 				E5D572DC1FE5780300DBD57A /* Constants.swift in Sources */,
 				E5D572EB1FE59EAE00DBD57A /* GSSearchListVC.swift in Sources */,
+				E5AA984F1FE6F3B000BB80B1 /* GSFollowersListVC.swift in Sources */,
 				E52A8B2B1FE552B100CCCC68 /* ConfigurationManager.swift in Sources */,
+				E5AA98911FE7173E00BB80B1 /* ConnectivityManager.swift in Sources */,
 				E5D572E91FE59EAE00DBD57A /* GSSearchListVC+SearchDelegates.swift in Sources */,
 				E5AA984C1FE6F2E500BB80B1 /* User.swift in Sources */,
 				E5AA983D1FE6E5A200BB80B1 /* Date+Additons.swift in Sources */,
 				E5D572EA1FE59EAE00DBD57A /* GSSearchListVC+TableExtension.swift in Sources */,
+				E5AA988B1FE70CD400BB80B1 /* CoreDataManager.swift in Sources */,
 				E5AA983B1FE6DB8800BB80B1 /* GSProfileOverviewSubview.swift in Sources */,
 				E5AA98161FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift in Sources */,
+				E5AA98581FE7005E00BB80B1 /* UITableView+Extension.swift in Sources */,
 				E5AA98331FE6D4F800BB80B1 /* GSProfileHeaderTableCell.swift in Sources */,
 				E5AA980F1FE6B96300BB80B1 /* GSPlaceholderView.swift in Sources */,
 				E5AA98241FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift in Sources */,
 				E5D572DF1FE5816A00DBD57A /* UIViewController+Additions.swift in Sources */,
+				E5AA98811FE70A4B00BB80B1 /* GithubSample.xcdatamodeld in Sources */,
 				E5D572E21FE581CC00DBD57A /* GSLoadMoreView.swift in Sources */,
 				E5AA98261FE6C95E00BB80B1 /* UIColor+Additions.swift in Sources */,
 				E5AA98401FE6EBF500BB80B1 /* GSBioTableCell.swift in Sources */,
@@ -546,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -597,7 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -613,7 +711,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMA5LQ6WPD;
 				INFOPLIST_FILE = GithubSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rajan.GithubSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -630,7 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMA5LQ6WPD;
 				INFOPLIST_FILE = GithubSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rajan.GithubSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -662,6 +760,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5AA987F1FE70A4B00BB80B1 /* GithubSample.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5AA98801FE70A4B00BB80B1 /* GithubSample.xcdatamodel */,
+			);
+			currentVersion = E5AA98801FE70A4B00BB80B1 /* GithubSample.xcdatamodel */;
+			path = GithubSample.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E52A8B081FE54A0F00CCCC68 /* Project object */;
 }
