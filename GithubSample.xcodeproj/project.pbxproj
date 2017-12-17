@@ -28,10 +28,10 @@
 		E5AA983D1FE6E5A200BB80B1 /* Date+Additons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA983C1FE6E5A200BB80B1 /* Date+Additons.swift */; };
 		E5AA98401FE6EBF500BB80B1 /* GSBioTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA983E1FE6EBF500BB80B1 /* GSBioTableCell.swift */; };
 		E5AA98411FE6EBF500BB80B1 /* GSBioTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5AA983F1FE6EBF500BB80B1 /* GSBioTableCell.xib */; };
+		E5AA984B1FE6F2E500BB80B1 /* User+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98491FE6F2E500BB80B1 /* User+Services.swift */; };
+		E5AA984C1FE6F2E500BB80B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA984A1FE6F2E500BB80B1 /* User.swift */; };
 		E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */; };
 		E5D572C31FE55EB100DBD57A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D572C21FE55EB100DBD57A /* Search.storyboard */; };
-		E5D572D51FE564F200DBD57A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572D11FE564F200DBD57A /* User.swift */; };
-		E5D572D71FE5679900DBD57A /* User+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572D61FE5679900DBD57A /* User+Services.swift */; };
 		E5D572DC1FE5780300DBD57A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572DB1FE5780300DBD57A /* Constants.swift */; };
 		E5D572DF1FE5816A00DBD57A /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572DE1FE5816A00DBD57A /* UIViewController+Additions.swift */; };
 		E5D572E21FE581CC00DBD57A /* GSLoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572E11FE581CC00DBD57A /* GSLoadMoreView.swift */; };
@@ -66,10 +66,10 @@
 		E5AA983C1FE6E5A200BB80B1 /* Date+Additons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Additons.swift"; sourceTree = "<group>"; };
 		E5AA983E1FE6EBF500BB80B1 /* GSBioTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSBioTableCell.swift; sourceTree = "<group>"; };
 		E5AA983F1FE6EBF500BB80B1 /* GSBioTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSBioTableCell.xib; sourceTree = "<group>"; };
+		E5AA98491FE6F2E500BB80B1 /* User+Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Services.swift"; sourceTree = "<group>"; };
+		E5AA984A1FE6F2E500BB80B1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D572C21FE55EB100DBD57A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		E5D572D11FE564F200DBD57A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E5D572D61FE5679900DBD57A /* User+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Services.swift"; sourceTree = "<group>"; };
 		E5D572DB1FE5780300DBD57A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E5D572DE1FE5816A00DBD57A /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		E5D572E11FE581CC00DBD57A /* GSLoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSLoadMoreView.swift; sourceTree = "<group>"; };
@@ -130,10 +130,10 @@
 		E52A8B121FE54A0F00CCCC68 /* GithubSample */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA98421FE6F2D400BB80B1 /* Models */,
 				E5D572DD1FE5815A00DBD57A /* Extensions */,
 				E5D572DA1FE577DB00DBD57A /* Constants */,
 				E5D572BA1FE55CD400DBD57A /* AppDelegate */,
-				E5D572B71FE5599100DBD57A /* Models */,
 				E52A8B4C1FE554F600CCCC68 /* Views */,
 				E52A8B2F1FE5540A00CCCC68 /* ViewControllers */,
 				E52A8B251FE54D5800CCCC68 /* Managers */,
@@ -247,12 +247,21 @@
 			path = ProfileOverviewSubview;
 			sourceTree = "<group>";
 		};
-		E5D572B71FE5599100DBD57A /* Models */ = {
+		E5AA98421FE6F2D400BB80B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E5D572CD1FE564F200DBD57A /* User */,
+				E5AA98481FE6F2E500BB80B1 /* User */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E5AA98481FE6F2E500BB80B1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA98491FE6F2E500BB80B1 /* User+Services.swift */,
+				E5AA984A1FE6F2E500BB80B1 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		E5D572BA1FE55CD400DBD57A /* AppDelegate */ = {
@@ -269,15 +278,6 @@
 				E5D572C21FE55EB100DBD57A /* Search.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		E5D572CD1FE564F200DBD57A /* User */ = {
-			isa = PBXGroup;
-			children = (
-				E5D572D11FE564F200DBD57A /* User.swift */,
-				E5D572D61FE5679900DBD57A /* User+Services.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		E5D572DA1FE577DB00DBD57A /* Constants */ = {
@@ -463,13 +463,13 @@
 				E5AA98371FE6D4F800BB80B1 /* GSSearchCell.swift in Sources */,
 				E5AA98141FE6BB4C00BB80B1 /* GSUserDetailVC.swift in Sources */,
 				E52A8B2E1FE5530000CCCC68 /* APIManager.swift in Sources */,
+				E5AA984B1FE6F2E500BB80B1 /* User+Services.swift in Sources */,
 				E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */,
 				E5D572DC1FE5780300DBD57A /* Constants.swift in Sources */,
-				E5D572D71FE5679900DBD57A /* User+Services.swift in Sources */,
 				E5D572EB1FE59EAE00DBD57A /* GSSearchListVC.swift in Sources */,
 				E52A8B2B1FE552B100CCCC68 /* ConfigurationManager.swift in Sources */,
-				E5D572D51FE564F200DBD57A /* User.swift in Sources */,
 				E5D572E91FE59EAE00DBD57A /* GSSearchListVC+SearchDelegates.swift in Sources */,
+				E5AA984C1FE6F2E500BB80B1 /* User.swift in Sources */,
 				E5AA983D1FE6E5A200BB80B1 /* Date+Additons.swift in Sources */,
 				E5D572EA1FE59EAE00DBD57A /* GSSearchListVC+TableExtension.swift in Sources */,
 				E5AA983B1FE6DB8800BB80B1 /* GSProfileOverviewSubview.swift in Sources */,
