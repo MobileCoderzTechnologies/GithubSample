@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Menlo.ttc">
-            <string>Menlo-Regular</string>
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
         </array>
     </customFonts>
     <objects>
@@ -40,7 +40,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKF-pM-ha2">
                         <rect key="frame" x="56" y="16.5" width="256" height="19"/>
-                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

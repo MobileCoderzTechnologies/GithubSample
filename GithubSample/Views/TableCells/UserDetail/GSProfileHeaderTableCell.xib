@@ -10,8 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
+        </array>
+        <array key="TrebuchetMSBold.ttf">
+            <string>TrebuchetMS-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -31,15 +34,21 @@
                             <constraint firstAttribute="width" constant="100" id="s4c-vd-Gu5"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70d-cj-dPV">
-                        <rect key="frame" x="139" y="116" width="42" height="20"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70d-cj-dPV">
+                        <rect key="frame" x="138.5" y="116" width="43.5" height="20"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7j-eH-PhF">
-                        <rect key="frame" x="145.5" y="144" width="29.5" height="14"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <rect key="frame" x="146" y="144" width="29.5" height="14"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="mFa-y8-bl0">
+                        <rect key="frame" x="218" y="8" width="94" height="13"/>
+                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="11"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -47,15 +56,24 @@
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="xB4-Kg-GDe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6jE-KW-hl5"/>
+                    <constraint firstItem="mFa-y8-bl0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="D8d-IK-39C"/>
                     <constraint firstItem="70d-cj-dPV" firstAttribute="top" secondItem="xB4-Kg-GDe" secondAttribute="bottom" constant="8" id="DW5-FJ-eyJ"/>
                     <constraint firstItem="xB4-Kg-GDe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Kwa-4j-KgX"/>
+                    <constraint firstAttribute="trailing" secondItem="mFa-y8-bl0" secondAttribute="trailing" constant="8" id="PFA-gx-0fj"/>
                     <constraint firstItem="70d-cj-dPV" firstAttribute="centerX" secondItem="xB4-Kg-GDe" secondAttribute="centerX" id="SdQ-DR-9EV"/>
                     <constraint firstItem="l7j-eH-PhF" firstAttribute="centerX" secondItem="70d-cj-dPV" secondAttribute="centerX" id="V3Y-Yb-2bE"/>
                     <constraint firstAttribute="bottom" secondItem="l7j-eH-PhF" secondAttribute="bottom" constant="9.5" id="ZKg-JQ-o1T"/>
+                    <constraint firstItem="mFa-y8-bl0" firstAttribute="leading" secondItem="xB4-Kg-GDe" secondAttribute="trailing" constant="8" id="eJ1-0M-NZe"/>
                     <constraint firstItem="l7j-eH-PhF" firstAttribute="top" secondItem="70d-cj-dPV" secondAttribute="bottom" constant="8" id="hpy-IO-Rjt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lastUpdateLabel" destination="mFa-y8-bl0" id="I55-eA-rmn"/>
+                <outlet property="locationLabel" destination="l7j-eH-PhF" id="ryV-1x-Q1e"/>
+                <outlet property="nameLabel" destination="70d-cj-dPV" id="XGo-GU-b4X"/>
+                <outlet property="userImageView" destination="xB4-Kg-GDe" id="4Nk-O4-Evm"/>
+            </connections>
             <point key="canvasLocation" x="33" y="164"/>
         </tableViewCell>
     </objects>
