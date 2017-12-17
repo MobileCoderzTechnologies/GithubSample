@@ -19,6 +19,16 @@ extension User {
             completionHandler(users, total, nil)
         }
     }
+    
+    static func fetchUserDetails(loginName:String,completionHandler:@escaping(_ users:User?, _ error:NSError?)->Void) {
+        fetchUserDetailsFromServer(loginName: loginName) { (user:User?, error:NSError?) in
+            if error != nil {
+                completionHandler(nil, error)
+                return
+            }
+            completionHandler(user, nil)
+        }
+    }
 }
 
 extension User {
@@ -43,7 +53,7 @@ extension User {
                 for user in response["items"].arrayValue {
                     users.append(User(user: user))
                 }
-                completionHandler(users, response["total"].intValue, nil)
+                completionHandler(users, response["total_count"].intValue, nil)
             }
             
         }
@@ -52,4 +62,19 @@ extension User {
     fileprivate static func fetchUserListFromDB(searchString:String,completionHandler:@escaping(_ users:[User]?,_ error:NSError?)->Void) {
         
     }
+    
+    fileprivate static func fetchUserDetailsFromServer(loginName:String, completionHandler:@escaping(_ users:User?, _ error:NSError?)->Void) {
+        APIManager.apiGet(serviceName: Constants.baseUrl+"users/\(loginName)", parameters: nil) { (response, error) in
+            if error != nil {
+                completionHandler(nil, error)
+                return
+            }
+            guard let response = response else {return}
+            print(response)
+            var user:User?
+            completionHandler(user, nil)
+            
+        }
+    }
+    
 }

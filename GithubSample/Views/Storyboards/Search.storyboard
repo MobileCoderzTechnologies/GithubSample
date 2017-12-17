@@ -27,9 +27,13 @@
                                     <outlet property="delegate" destination="6Ak-9J-IEM" id="ZMC-SG-RAc"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-xP-vi8">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Github Users" translatesAutoresizingMaskIntoConstraints="NO" id="nKb-xP-vi8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="6Ak-9J-IEM" id="MVe-6p-N70"/>
                                 </connections>
@@ -56,6 +60,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpA-yQ-MbR" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-674.39999999999998" y="-269.41529235382313"/>
+        </scene>
+        <!--User DetailVC-->
+        <scene sceneID="S0j-g7-Ncr">
+            <objects>
+                <viewController storyboardIdentifier="GSUserDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hzy-x8-zQM" customClass="GSUserDetailVC" customModule="GithubSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="heF-D6-maJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xtv-H3-HWD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hzy-x8-zQM" id="6mj-7x-2Xf"/>
+                                    <outlet property="delegate" destination="hzy-x8-zQM" id="COL-fH-XCt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="bottom" secondItem="VK9-1b-IRy" secondAttribute="bottom" id="PqS-re-ZJW"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="leading" secondItem="VK9-1b-IRy" secondAttribute="leading" id="Z7N-ef-ABn"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="trailing" secondItem="VK9-1b-IRy" secondAttribute="trailing" id="avY-9f-VAH"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="top" secondItem="VK9-1b-IRy" secondAttribute="top" id="xCW-5d-s6w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VK9-1b-IRy"/>
+                    </view>
+                    <connections>
+                        <outlet property="userDetailTableView" destination="xtv-H3-HWD" id="tao-dm-RPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ut6-Kp-oIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2000000000000002" y="-269.41529235382313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcR-Xq-G0u">

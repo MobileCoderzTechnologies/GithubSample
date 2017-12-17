@@ -14,6 +14,14 @@
 		E52A8B2E1FE5530000CCCC68 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A8B2D1FE5530000CCCC68 /* APIManager.swift */; };
 		E52A8B501FE5553800CCCC68 /* GSSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52A8B4E1FE5553800CCCC68 /* GSSearchCell.swift */; };
 		E52A8B511FE5553800CCCC68 /* GSSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E52A8B4F1FE5553800CCCC68 /* GSSearchCell.xib */; };
+		E5AA980F1FE6B96300BB80B1 /* GSPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA980E1FE6B96300BB80B1 /* GSPlaceholderView.swift */; };
+		E5AA98111FE6B96A00BB80B1 /* GSPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5AA98101FE6B96A00BB80B1 /* GSPlaceholderView.xib */; };
+		E5AA98141FE6BB4C00BB80B1 /* GSUserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98131FE6BB4C00BB80B1 /* GSUserDetailVC.swift */; };
+		E5AA98161FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98151FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift */; };
+		E5AA98211FE6C74200BB80B1 /* GSProfileHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA981F1FE6C74200BB80B1 /* GSProfileHeaderTableCell.swift */; };
+		E5AA98221FE6C74200BB80B1 /* GSProfileHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5AA98201FE6C74200BB80B1 /* GSProfileHeaderTableCell.xib */; };
+		E5AA98241FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98231FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift */; };
+		E5AA98261FE6C95E00BB80B1 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AA98251FE6C95E00BB80B1 /* UIColor+Additions.swift */; };
 		E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */; };
 		E5D572C31FE55EB100DBD57A /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D572C21FE55EB100DBD57A /* Search.storyboard */; };
 		E5D572D51FE564F200DBD57A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D572D11FE564F200DBD57A /* User.swift */; };
@@ -38,6 +46,14 @@
 		E52A8B2D1FE5530000CCCC68 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E52A8B4E1FE5553800CCCC68 /* GSSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSSearchCell.swift; sourceTree = "<group>"; };
 		E52A8B4F1FE5553800CCCC68 /* GSSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSSearchCell.xib; sourceTree = "<group>"; };
+		E5AA980E1FE6B96300BB80B1 /* GSPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSPlaceholderView.swift; sourceTree = "<group>"; };
+		E5AA98101FE6B96A00BB80B1 /* GSPlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSPlaceholderView.xib; sourceTree = "<group>"; };
+		E5AA98131FE6BB4C00BB80B1 /* GSUserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSUserDetailVC.swift; sourceTree = "<group>"; };
+		E5AA98151FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Additions.swift"; sourceTree = "<group>"; };
+		E5AA981F1FE6C74200BB80B1 /* GSProfileHeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSProfileHeaderTableCell.swift; sourceTree = "<group>"; };
+		E5AA98201FE6C74200BB80B1 /* GSProfileHeaderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GSProfileHeaderTableCell.xib; sourceTree = "<group>"; };
+		E5AA98231FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GSUserDetailVC+TableExtension.swift"; sourceTree = "<group>"; };
+		E5AA98251FE6C95E00BB80B1 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		E5D572BB1FE55CE000DBD57A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5D572C21FE55EB100DBD57A /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		E5D572D11FE564F200DBD57A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -144,6 +160,7 @@
 		E52A8B2F1FE5540A00CCCC68 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA98121FE6BB3A00BB80B1 /* UserDetail */,
 				E5D572E51FE59EAE00DBD57A /* SearchList */,
 			);
 			path = ViewControllers;
@@ -152,6 +169,7 @@
 		E52A8B4C1FE554F600CCCC68 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5AA98091FE6B57D00BB80B1 /* PlaceholderViews */,
 				E5D572E01FE581B200DBD57A /* LoadMore */,
 				E5D572BD1FE55DF700DBD57A /* Storyboards */,
 				E52A8B4D1FE5550700CCCC68 /* TableCells */,
@@ -164,8 +182,28 @@
 			children = (
 				E52A8B4E1FE5553800CCCC68 /* GSSearchCell.swift */,
 				E52A8B4F1FE5553800CCCC68 /* GSSearchCell.xib */,
+				E5AA981F1FE6C74200BB80B1 /* GSProfileHeaderTableCell.swift */,
+				E5AA98201FE6C74200BB80B1 /* GSProfileHeaderTableCell.xib */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		E5AA98091FE6B57D00BB80B1 /* PlaceholderViews */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA980E1FE6B96300BB80B1 /* GSPlaceholderView.swift */,
+				E5AA98101FE6B96A00BB80B1 /* GSPlaceholderView.xib */,
+			);
+			path = PlaceholderViews;
+			sourceTree = "<group>";
+		};
+		E5AA98121FE6BB3A00BB80B1 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E5AA98131FE6BB4C00BB80B1 /* GSUserDetailVC.swift */,
+				E5AA98231FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		E5D572B71FE5599100DBD57A /* Models */ = {
@@ -213,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				E5D572DE1FE5816A00DBD57A /* UIViewController+Additions.swift */,
+				E5AA98151FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift */,
+				E5AA98251FE6C95E00BB80B1 /* UIColor+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +340,8 @@
 			files = (
 				E52A8B1E1FE54A0F00CCCC68 /* LaunchScreen.storyboard in Resources */,
 				E52A8B511FE5553800CCCC68 /* GSSearchCell.xib in Resources */,
+				E5AA98111FE6B96A00BB80B1 /* GSPlaceholderView.xib in Resources */,
+				E5AA98221FE6C74200BB80B1 /* GSProfileHeaderTableCell.xib in Resources */,
 				E52A8B1B1FE54A0F00CCCC68 /* Assets.xcassets in Resources */,
 				E5D572E41FE581D300DBD57A /* GSLoadMoreView.xib in Resources */,
 				E5D572C31FE55EB100DBD57A /* Search.storyboard in Resources */,
@@ -373,18 +415,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5AA98141FE6BB4C00BB80B1 /* GSUserDetailVC.swift in Sources */,
 				E52A8B2E1FE5530000CCCC68 /* APIManager.swift in Sources */,
 				E5D572BC1FE55CE100DBD57A /* AppDelegate.swift in Sources */,
 				E5D572DC1FE5780300DBD57A /* Constants.swift in Sources */,
 				E5D572D71FE5679900DBD57A /* User+Services.swift in Sources */,
+				E5AA98211FE6C74200BB80B1 /* GSProfileHeaderTableCell.swift in Sources */,
 				E5D572EB1FE59EAE00DBD57A /* GSSearchListVC.swift in Sources */,
 				E52A8B2B1FE552B100CCCC68 /* ConfigurationManager.swift in Sources */,
 				E52A8B501FE5553800CCCC68 /* GSSearchCell.swift in Sources */,
 				E5D572D51FE564F200DBD57A /* User.swift in Sources */,
 				E5D572E91FE59EAE00DBD57A /* GSSearchListVC+SearchDelegates.swift in Sources */,
 				E5D572EA1FE59EAE00DBD57A /* GSSearchListVC+TableExtension.swift in Sources */,
+				E5AA98161FE6BBBB00BB80B1 /* UIStoryboard+Additions.swift in Sources */,
+				E5AA980F1FE6B96300BB80B1 /* GSPlaceholderView.swift in Sources */,
+				E5AA98241FE6C82A00BB80B1 /* GSUserDetailVC+TableExtension.swift in Sources */,
 				E5D572DF1FE5816A00DBD57A /* UIViewController+Additions.swift in Sources */,
 				E5D572E21FE581CC00DBD57A /* GSLoadMoreView.swift in Sources */,
+				E5AA98261FE6C95E00BB80B1 /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

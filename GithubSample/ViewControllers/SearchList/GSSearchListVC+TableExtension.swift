@@ -35,8 +35,16 @@ extension GSSearchListVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == self.users.count - 1 {
-            loadMore()
+            if total != self.users.count {
+                loadMore()
+            }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userDetailVC = UIStoryboard.searchStoryBoard().instantiateViewController(type: GSUserDetailVC.self)!
+        userDetailVC.loginName = users[indexPath.row].loginName
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
     }
     
     

@@ -17,11 +17,17 @@ class GSSearchListVC: UIViewController {
     var pageNo = 1
     var total = 0
     var isLoading = false
-    
+    var placeHolderView:GSPlaceholderView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     func setup() {
@@ -29,21 +35,27 @@ class GSSearchListVC: UIViewController {
         let titleImageView = UIImageView(image: UIImage(named:"githubLogo"))
         titleImageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = titleImageView
+        
+        placeHolderView = GSPlaceholderView.loadPlaceHolderView()
+        placeHolderView?.frame = CGRect(x: 0, y: 0, width: 300, height: 200)
+        placeHolderView?.center = self.view.center
+        self.view.addSubview(placeHolderView!)
     }
     
     func fetchUsers(searchString:String,pageNo:Int) {
-        isLoading = true
         User.fetchUserList(searchString: searchString, pageNo: pageNo) { (users:[User]?, total:Int, error:NSError?) in
             self.isLoading = false
-            self.searchUsersTableView.tableFooterView = nil
             if error != nil {
                 self.showToast(message: error!.localizedDescription)
+                self.searchUsersTableView.tableFooterView = nil
                 return
             }
             if let users = users {
                 self.users = self.users + users
                 self.total = total
+                self.placeHolderView?.isHidden = self.users.count == 0 ? false : true
                 DispatchQueue.main.async {
+                    self.searchUsersTableView.tableFooterView = nil
                     self.searchUsersTableView.reloadData()
                 }
             }
@@ -52,20 +64,12 @@ class GSSearchListVC: UIViewController {
     
     func loadMore() {
         if total == self.users.count || isLoading {return}
-        pageNo += 1
-        print(pageNo)
-        self.setupLoadingMoreOnTable(tableView: self.searchUsersTableView)
-        self.fetchUsers(searchString: userSearchBar.text!, pageNo: pageNo)
+        if total > self.users.count {
+            pageNo += 1
+            print(pageNo)
+            isLoading = true
+            self.setupLoadingMoreOnTable(tableView: self.searchUsersTableView)
+            self.fetchUsers(searchString: userSearchBar.text!, pageNo: pageNo)
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
