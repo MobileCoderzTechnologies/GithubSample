@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
 struct Constants {
     static let baseUrl = ConfigurationManager.shared().applicationEndPoint()
-
+    static let placeHolderImage = UIImage(named: "placeholder")
     struct CellIdentifier {
         static let search = "GSSearchCell"
         static let profileHeader  = "GSProfileHeaderTableCell"

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xt9-Dh-BrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xt9-Dh-BrA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="mG1-Z9-cbI">
             <objects>
                 <viewController storyboardIdentifier="GSSearchListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Ak-9J-IEM" customClass="GSSearchListVC" customModule="GithubSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KJO-jR-85s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rll-Tt-ItM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3AP-US-WbE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,15 +44,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pLY-i1-iKz" firstAttribute="bottom" secondItem="dag-rm-tuk" secondAttribute="bottom" id="0oL-T8-81w"/>
-                            <constraint firstItem="nKb-xP-vi8" firstAttribute="trailing" secondItem="dag-rm-tuk" secondAttribute="trailing" id="3cV-aS-45u"/>
-                            <constraint firstItem="nKb-xP-vi8" firstAttribute="leading" secondItem="dag-rm-tuk" secondAttribute="leading" id="4lf-yS-7ie"/>
-                            <constraint firstItem="nKb-xP-vi8" firstAttribute="top" secondItem="dag-rm-tuk" secondAttribute="top" id="aFB-zn-54E"/>
-                            <constraint firstItem="pLY-i1-iKz" firstAttribute="leading" secondItem="dag-rm-tuk" secondAttribute="leading" id="eBI-bq-OD3"/>
+                            <constraint firstItem="pLY-i1-iKz" firstAttribute="bottom" secondItem="3AP-US-WbE" secondAttribute="bottom" id="0oL-T8-81w"/>
+                            <constraint firstItem="nKb-xP-vi8" firstAttribute="trailing" secondItem="3AP-US-WbE" secondAttribute="trailing" id="3cV-aS-45u"/>
+                            <constraint firstItem="nKb-xP-vi8" firstAttribute="leading" secondItem="3AP-US-WbE" secondAttribute="leading" id="4lf-yS-7ie"/>
+                            <constraint firstItem="nKb-xP-vi8" firstAttribute="top" secondItem="3AP-US-WbE" secondAttribute="top" id="aFB-zn-54E"/>
+                            <constraint firstItem="pLY-i1-iKz" firstAttribute="leading" secondItem="3AP-US-WbE" secondAttribute="leading" id="eBI-bq-OD3"/>
                             <constraint firstItem="pLY-i1-iKz" firstAttribute="top" secondItem="nKb-xP-vi8" secondAttribute="bottom" id="feP-9C-BEG"/>
-                            <constraint firstItem="pLY-i1-iKz" firstAttribute="trailing" secondItem="dag-rm-tuk" secondAttribute="trailing" id="kLa-PX-a1m"/>
+                            <constraint firstItem="pLY-i1-iKz" firstAttribute="trailing" secondItem="3AP-US-WbE" secondAttribute="trailing" id="kLa-PX-a1m"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dag-rm-tuk"/>
                     </view>
                     <navigationItem key="navigationItem" id="ccj-LD-oCj"/>
                     <connections>
@@ -65,12 +67,16 @@
         <scene sceneID="S0j-g7-Ncr">
             <objects>
                 <viewController storyboardIdentifier="GSUserDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hzy-x8-zQM" customClass="GSUserDetailVC" customModule="GithubSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HWc-LS-3LA"/>
+                        <viewControllerLayoutGuide type="bottom" id="sv8-s8-gUz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="heF-D6-maJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xtv-H3-HWD">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hzy-x8-zQM" id="6mj-7x-2Xf"/>
@@ -80,12 +86,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xtv-H3-HWD" firstAttribute="bottom" secondItem="VK9-1b-IRy" secondAttribute="bottom" id="PqS-re-ZJW"/>
-                            <constraint firstItem="xtv-H3-HWD" firstAttribute="leading" secondItem="VK9-1b-IRy" secondAttribute="leading" id="Z7N-ef-ABn"/>
-                            <constraint firstItem="xtv-H3-HWD" firstAttribute="trailing" secondItem="VK9-1b-IRy" secondAttribute="trailing" id="avY-9f-VAH"/>
-                            <constraint firstItem="xtv-H3-HWD" firstAttribute="top" secondItem="VK9-1b-IRy" secondAttribute="top" id="xCW-5d-s6w"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="bottom" secondItem="heF-D6-maJ" secondAttribute="bottom" id="PqS-re-ZJW"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="leading" secondItem="heF-D6-maJ" secondAttribute="leading" id="Z7N-ef-ABn"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="trailing" secondItem="heF-D6-maJ" secondAttribute="trailing" id="avY-9f-VAH"/>
+                            <constraint firstItem="xtv-H3-HWD" firstAttribute="top" secondItem="heF-D6-maJ" secondAttribute="top" id="xCW-5d-s6w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="VK9-1b-IRy"/>
                     </view>
                     <connections>
                         <outlet property="userDetailTableView" destination="xtv-H3-HWD" id="tao-dm-RPG"/>
@@ -99,12 +104,16 @@
         <scene sceneID="45a-ib-iag">
             <objects>
                 <viewController storyboardIdentifier="GSFollowersListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x9d-ir-Alb" customClass="GSFollowersListVC" customModule="GithubSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9fT-sw-ADs"/>
+                        <viewControllerLayoutGuide type="bottom" id="DBB-63-ftL"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3A6-cv-i4K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iA1-Z2-OAT">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="x9d-ir-Alb" id="mPT-oM-a8Z"/>
@@ -114,12 +123,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="top" secondItem="4Mq-f9-dCr" secondAttribute="top" id="51y-86-sbs"/>
-                            <constraint firstItem="4Mq-f9-dCr" firstAttribute="bottom" secondItem="iA1-Z2-OAT" secondAttribute="bottom" id="XVr-v5-1Fx"/>
-                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="leading" secondItem="4Mq-f9-dCr" secondAttribute="leading" id="pjJ-As-giG"/>
-                            <constraint firstItem="4Mq-f9-dCr" firstAttribute="trailing" secondItem="iA1-Z2-OAT" secondAttribute="trailing" id="w0b-Rc-UWm"/>
+                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="top" secondItem="3A6-cv-i4K" secondAttribute="top" id="51y-86-sbs"/>
+                            <constraint firstAttribute="bottom" secondItem="iA1-Z2-OAT" secondAttribute="bottom" id="XVr-v5-1Fx"/>
+                            <constraint firstItem="iA1-Z2-OAT" firstAttribute="leading" secondItem="3A6-cv-i4K" secondAttribute="leading" id="pjJ-As-giG"/>
+                            <constraint firstAttribute="trailing" secondItem="iA1-Z2-OAT" secondAttribute="trailing" id="w0b-Rc-UWm"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4Mq-f9-dCr"/>
                     </view>
                     <connections>
                         <outlet property="followersTableView" destination="iA1-Z2-OAT" id="2MU-FK-T2D"/>

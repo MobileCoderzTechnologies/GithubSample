@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GSProfileOverviewTableCell" rowHeight="76" id="KGk-i7-Jjw" customClass="GSProfileOverviewTableCell" customModule="GithubSample" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="GSProfileOverviewTableCell" rowHeight="76" id="KGk-i7-Jjw" customClass="GSProfileOverviewTableCell" customModule="GithubSample" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -27,91 +26,94 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njU-ke-gY0">
                         <rect key="frame" x="8" y="8" width="304" height="59.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gsk-a1-w8E">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bae-Aa-Uq9" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bae-Aa-Uq9" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK9-cw-tpX">
-                                                <rect key="frame" x="8" y="8" width="25" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-hf-fef">
-                                                <rect key="frame" x="8" y="32" width="63" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="d3U-hf-fef" firstAttribute="leading" secondItem="dK9-cw-tpX" secondAttribute="leading" id="6wm-uq-DAk"/>
-                                            <constraint firstItem="d3U-hf-fef" firstAttribute="top" secondItem="dK9-cw-tpX" secondAttribute="bottom" constant="8" id="kqY-Qc-niv"/>
-                                            <constraint firstItem="dK9-cw-tpX" firstAttribute="leading" secondItem="bae-Aa-Uq9" secondAttribute="leading" constant="8" id="wD9-Ny-mSB"/>
-                                            <constraint firstItem="dK9-cw-tpX" firstAttribute="top" secondItem="bae-Aa-Uq9" secondAttribute="top" constant="8" id="yLU-Tu-kfH"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-t9-Bju" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
-                                        <rect key="frame" x="102" y="0.0" width="100" height="60"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-X8-h7X">
-                                                <rect key="frame" x="8" y="32.5" width="62.5" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-yo-t4s">
-                                                <rect key="frame" x="8" y="8" width="25" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="5YM-X8-h7X" firstAttribute="top" secondItem="Q39-yo-t4s" secondAttribute="bottom" constant="8" id="7BA-1b-2gU"/>
-                                            <constraint firstItem="Q39-yo-t4s" firstAttribute="leading" secondItem="ofa-t9-Bju" secondAttribute="leading" constant="8" id="9P6-Z7-r7d"/>
-                                            <constraint firstItem="Q39-yo-t4s" firstAttribute="top" secondItem="ofa-t9-Bju" secondAttribute="top" constant="8" id="rG9-nd-0FB"/>
-                                            <constraint firstItem="5YM-X8-h7X" firstAttribute="leading" secondItem="Q39-yo-t4s" secondAttribute="leading" id="vfz-aC-9Np"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYD-aJ-eqT" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
-                                        <rect key="frame" x="204" y="0.0" width="100" height="60"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z87-0G-bpN">
-                                                <rect key="frame" x="8" y="8" width="25" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public Repos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqP-TA-m8G">
-                                                <rect key="frame" x="8" y="32.5" width="83.5" height="16.5"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="z87-0G-bpN" firstAttribute="leading" secondItem="NYD-aJ-eqT" secondAttribute="leading" constant="8" id="2kO-kn-AgK"/>
-                                            <constraint firstItem="yqP-TA-m8G" firstAttribute="top" secondItem="z87-0G-bpN" secondAttribute="bottom" constant="8" id="P3Z-ww-OPb"/>
-                                            <constraint firstItem="yqP-TA-m8G" firstAttribute="leading" secondItem="z87-0G-bpN" secondAttribute="leading" id="XIz-8X-Y2j"/>
-                                            <constraint firstItem="z87-0G-bpN" firstAttribute="top" secondItem="NYD-aJ-eqT" secondAttribute="top" constant="8" id="rEh-9j-m4U"/>
-                                        </constraints>
-                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK9-cw-tpX">
+                                        <rect key="frame" x="8" y="8" width="25" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3U-hf-fef">
+                                        <rect key="frame" x="8" y="32" width="63" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="d3U-hf-fef" firstAttribute="leading" secondItem="dK9-cw-tpX" secondAttribute="leading" id="6wm-uq-DAk"/>
+                                    <constraint firstItem="dK9-cw-tpX" firstAttribute="top" secondItem="bae-Aa-Uq9" secondAttribute="top" constant="8" id="Uht-Bb-bCz"/>
+                                    <constraint firstItem="dK9-cw-tpX" firstAttribute="leading" secondItem="bae-Aa-Uq9" secondAttribute="leading" constant="8" id="ZIu-IP-4mJ"/>
+                                    <constraint firstItem="d3U-hf-fef" firstAttribute="top" secondItem="dK9-cw-tpX" secondAttribute="bottom" constant="8" id="kqY-Qc-niv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-t9-Bju" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
+                                <rect key="frame" x="102" y="0.0" width="100" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-X8-h7X">
+                                        <rect key="frame" x="8" y="32.5" width="62.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-yo-t4s">
+                                        <rect key="frame" x="8" y="8" width="25" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Q39-yo-t4s" firstAttribute="leading" secondItem="ofa-t9-Bju" secondAttribute="leading" constant="8" id="3LZ-UB-Sqd"/>
+                                    <constraint firstItem="5YM-X8-h7X" firstAttribute="top" secondItem="Q39-yo-t4s" secondAttribute="bottom" constant="8" id="7BA-1b-2gU"/>
+                                    <constraint firstItem="Q39-yo-t4s" firstAttribute="top" secondItem="ofa-t9-Bju" secondAttribute="top" constant="8" id="ric-Qx-O2Q"/>
+                                    <constraint firstItem="5YM-X8-h7X" firstAttribute="leading" secondItem="Q39-yo-t4s" secondAttribute="leading" id="vfz-aC-9Np"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYD-aJ-eqT" customClass="GSProfileOverviewSubview" customModule="GithubSample" customModuleProvider="target">
+                                <rect key="frame" x="204" y="0.0" width="100" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z87-0G-bpN">
+                                        <rect key="frame" x="8" y="8" width="25" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public Repos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqP-TA-m8G">
+                                        <rect key="frame" x="8" y="32.5" width="83.5" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.62745098040000002" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="z87-0G-bpN" firstAttribute="top" secondItem="NYD-aJ-eqT" secondAttribute="top" constant="8" id="Ntw-IW-piB"/>
+                                    <constraint firstItem="yqP-TA-m8G" firstAttribute="top" secondItem="z87-0G-bpN" secondAttribute="bottom" constant="8" id="P3Z-ww-OPb"/>
+                                    <constraint firstItem="z87-0G-bpN" firstAttribute="leading" secondItem="NYD-aJ-eqT" secondAttribute="leading" constant="8" id="RuT-qD-TzP"/>
+                                    <constraint firstItem="yqP-TA-m8G" firstAttribute="leading" secondItem="z87-0G-bpN" secondAttribute="leading" id="XIz-8X-Y2j"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ofa-t9-Bju" firstAttribute="top" secondItem="njU-ke-gY0" secondAttribute="top" id="60z-lw-Aco"/>
+                            <constraint firstItem="NYD-aJ-eqT" firstAttribute="width" secondItem="bae-Aa-Uq9" secondAttribute="width" id="BCe-Zd-2fq"/>
+                            <constraint firstItem="NYD-aJ-eqT" firstAttribute="leading" secondItem="ofa-t9-Bju" secondAttribute="trailing" constant="2" id="FzV-dp-MHp"/>
+                            <constraint firstItem="bae-Aa-Uq9" firstAttribute="leading" secondItem="njU-ke-gY0" secondAttribute="leading" id="IOo-mB-Yyq"/>
                             <constraint firstAttribute="height" constant="59.5" id="NPI-Da-ysT"/>
-                            <constraint firstItem="gsk-a1-w8E" firstAttribute="top" secondItem="njU-ke-gY0" secondAttribute="top" id="R10-Py-RiY"/>
-                            <constraint firstAttribute="bottom" secondItem="gsk-a1-w8E" secondAttribute="bottom" id="Wkx-Gj-zTS"/>
-                            <constraint firstAttribute="trailing" secondItem="gsk-a1-w8E" secondAttribute="trailing" id="sL7-rs-UgL"/>
-                            <constraint firstItem="gsk-a1-w8E" firstAttribute="leading" secondItem="njU-ke-gY0" secondAttribute="leading" id="zeU-7x-MDd"/>
+                            <constraint firstAttribute="bottom" secondItem="bae-Aa-Uq9" secondAttribute="bottom" id="Nqy-xW-Zx9"/>
+                            <constraint firstItem="ofa-t9-Bju" firstAttribute="width" secondItem="bae-Aa-Uq9" secondAttribute="width" id="Pcj-X9-ngp"/>
+                            <constraint firstItem="NYD-aJ-eqT" firstAttribute="top" secondItem="njU-ke-gY0" secondAttribute="top" id="Qpb-0e-gY8"/>
+                            <constraint firstAttribute="bottom" secondItem="ofa-t9-Bju" secondAttribute="bottom" id="Xhh-0u-5EJ"/>
+                            <constraint firstAttribute="bottom" secondItem="NYD-aJ-eqT" secondAttribute="bottom" id="aN3-NK-zFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="NYD-aJ-eqT" secondAttribute="trailing" id="i9J-Dn-UNK"/>
+                            <constraint firstItem="bae-Aa-Uq9" firstAttribute="top" secondItem="njU-ke-gY0" secondAttribute="top" id="pWj-vP-5By"/>
+                            <constraint firstItem="ofa-t9-Bju" firstAttribute="leading" secondItem="bae-Aa-Uq9" secondAttribute="trailing" constant="2" id="zVq-KF-O9A"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -123,7 +125,6 @@
                     <constraint firstItem="njU-ke-gY0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cST-IE-dD8"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="followersLabel" destination="dK9-cw-tpX" id="PxE-aG-wUi"/>
                 <outlet property="followersView" destination="bae-Aa-Uq9" id="qvL-E9-PzC"/>

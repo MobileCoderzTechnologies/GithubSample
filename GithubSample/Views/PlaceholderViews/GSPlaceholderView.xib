@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -22,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udh-kW-ACh">
-                    <rect key="frame" x="112.5" y="258.5" width="150" height="170"/>
+                    <rect key="frame" x="112.5" y="248.5" width="150" height="170"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fwJ-BZ-kHV">
                             <rect key="frame" x="11" y="8" width="128" height="128"/>
@@ -59,10 +58,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="udh-kW-ACh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="9w0-zJ-N6A"/>
-                <constraint firstItem="udh-kW-ACh" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="r1I-H1-qfZ"/>
+                <constraint firstItem="udh-kW-ACh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9w0-zJ-N6A"/>
+                <constraint firstItem="udh-kW-ACh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="r1I-H1-qfZ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="placeholderLabel" destination="LEf-ur-gYU" id="3zs-8A-CiE"/>
             </connections>

@@ -18,7 +18,7 @@ class CoreDataManager: NSObject {
                 CoreDataManager.addUser(user: user, searchName: searchName)
             }
         }
-        CoreDataStack.sharedManager.saveMainContext()
+        CoreDataStack.sharedManager.saveContext()
     }
     
     class func addUser(user:JSON,searchName:String) {

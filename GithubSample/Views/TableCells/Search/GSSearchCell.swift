@@ -26,8 +26,8 @@ class GSSearchCell: UITableViewCell {
     func setup(user:User) {
         self.userLoginNameLabel.text = user.loginName
         self.userImageView.sd_setShowActivityIndicatorView(true)
-        self.userImageView.sd_setIndicatorStyle(.gray)
-        self.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: UIImage(named: "placeHolder"))
+        self.userImageView.sd_setIndicatorStyle(.white)
+        self.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: Constants.placeHolderImage)
     }
     
 }

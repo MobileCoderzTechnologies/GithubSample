@@ -31,8 +31,8 @@ class GSProfileHeaderTableCell: UITableViewCell {
             self.lastUpdateLabel.text = "Last Updated \n\(dateString)"
         }
         self.userImageView.sd_setShowActivityIndicatorView(true)
-        self.userImageView.sd_setIndicatorStyle(.gray)
-        self.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: UIImage(named: "placeHolder"))
+        self.userImageView.sd_setIndicatorStyle(.white)
+        self.userImageView.sd_setImage(with: URL(string:user.avatar), placeholderImage: Constants.placeHolderImage)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
